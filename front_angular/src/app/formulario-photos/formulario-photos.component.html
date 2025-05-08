@@ -1,0 +1,24 @@
+<h1>{{titulo}}</h1>
+
+<form (submit)="GuardarCambiosPhotos()" [formGroup] = "FormPhone">
+
+  <mat-form-field appearance ="outline">
+    <mat-label> title</mat-label>
+    <input [formControl]="FormPhone.controls.title" matInput/>
+  </mat-form-field>
+
+  <mat-form-field appearance ="outline">
+    <mat-label> url</mat-label>
+    <input [formControl]="FormPhone.controls.url" matInput/>
+  </mat-form-field>
+
+  <mat-form-field appearance ="outline">
+    <mat-label> thumbnailUrl</mat-label>
+    <input [formControl]="FormPhone.controls.thumbnailUrl" matInput/>
+  </mat-form-field>
+  
+  <div>
+    <button type="submit"  mat-flat-button>Guardar Cambios</button>
+    <a mat-stroked-button routerLink="/photos"> Cancelar</a>
+  </div>
+</form>

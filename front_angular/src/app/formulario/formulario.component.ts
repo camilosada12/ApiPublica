@@ -1,13 +1,14 @@
 import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../Userservices/user.service';
-import { User_Create } from '../Modelos/User_modelos';
+
 import { Title } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { User_modelos } from '../Modelos/User_modelos';
 
 @Component({
   selector: 'app-formulario',
@@ -21,9 +22,9 @@ export class FormularioComponent implements OnInit {
   private services = inject(UserService)
 
   @Input() titulo!: string;
-  @Input() modelo?: User_Create;
+  @Input() modelo?: User_modelos;
 
-  @Output() posteoFormulario = new EventEmitter<User_Create>
+  @Output() posteoFormulario = new EventEmitter<User_modelos>
 
   FormUser = this.form.group({
     title: [""],
@@ -37,7 +38,7 @@ export class FormularioComponent implements OnInit {
   }
 
   GuardarCambios(){
-    let User = this.FormUser.value as User_Create
+    let User = this.FormUser.value as User_modelos
     this.posteoFormulario.emit(User);
     console.log(User)
   }

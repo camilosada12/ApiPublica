@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-delete-user',
-  template: '', // sin HTML
+  template: '', 
   styleUrl: './delete-user.component.css'
 })
 export class DeleteUserComponent implements OnInit {

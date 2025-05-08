@@ -1,0 +1,24 @@
+<h1>{{titulo}}</h1>
+
+<form (submit)="GuardarCambiosComentarios()" [formGroup] = "FormComentarios">
+
+  <mat-form-field appearance ="outline">
+    <mat-label> name</mat-label>
+    <input [formControl]="FormComentarios.controls.name" matInput/>
+  </mat-form-field>
+
+  <mat-form-field appearance ="outline">
+    <mat-label> email</mat-label>
+    <input [formControl]="FormComentarios.controls.email" matInput/>
+  </mat-form-field>
+
+  <mat-form-field appearance ="outline">
+    <mat-label> body</mat-label>
+    <input [formControl]="FormComentarios.controls.body" matInput/>
+  </mat-form-field>
+  
+  <div>
+    <button type="submit"  mat-flat-button>Guardar Cambios</button>
+    <a mat-stroked-button routerLink="/comentarios"> Cancelar</a>
+  </div>
+</form>

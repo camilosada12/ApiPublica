@@ -1,7 +1,7 @@
 import { Component, inject, Input, numberAttribute, OnInit } from '@angular/core';
 import { UserService } from '../Userservices/user.service';
 import { Router } from '@angular/router';
-import { User_Create, User_modelos } from '../Modelos/User_modelos';
+import {  User_modelos } from '../Modelos/User_modelos';
 import { FormularioComponent } from '../formulario/formulario.component';
 
 @Component({

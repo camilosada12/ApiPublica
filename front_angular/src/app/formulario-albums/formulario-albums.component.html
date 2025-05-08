@@ -1,0 +1,14 @@
+<h1>{{titulo}}</h1>
+
+<form (submit)="GuardarCambiosComentarios()" [formGroup] = "FormAlbums">
+
+  <mat-form-field appearance ="outline">
+    <mat-label> name</mat-label>
+    <input [formControl]="FormAlbums.controls.title" matInput/>
+  </mat-form-field>
+  
+  <div>
+    <button type="submit"  mat-flat-button>Guardar Cambios</button>
+    <a mat-stroked-button routerLink="/Albums"> Cancelar</a>
+  </div>
+</form>
